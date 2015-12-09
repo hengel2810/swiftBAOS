@@ -4,10 +4,11 @@ Swift Library to communicate with the KNX BAOS 777 from Weinzierl
 
 # Special Thanks
 
-Special Thanks to Dalton & Austin Cherry who provide the Starscream & swiftHTTP Framework
+Special Thanks to Dalton & Austin Cherry who provide the Starscream & swiftHTTP Framework and Weinzierl Engineering GmbH who gives me access to the REST-API from the BAOS 777
 
 Dalton Cherry -> https://github.com/daltoniam <br>
-Austin Cherry -> https://github.com/acmacalister
+Austin Cherry -> https://github.com/acmacalister <br>
+Weinzierl Engineering GmbH -> http://weinzierl.de
 
 # Licence
 
