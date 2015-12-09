@@ -11,6 +11,11 @@
 		FE20AF401C18D60C0045CBEA /* swiftBAOS.h in Headers */ = {isa = PBXBuildFile; fileRef = FE20AF3F1C18D60C0045CBEA /* swiftBAOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE20AF471C18D60C0045CBEA /* swiftBAOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE20AF3C1C18D60C0045CBEA /* swiftBAOS.framework */; };
 		FE20AF4C1C18D60C0045CBEA /* swiftBAOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE20AF4B1C18D60C0045CBEA /* swiftBAOSTests.swift */; };
+		FEFF56E21C18DBE1006D25F0 /* IndicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */; };
+		FEFF56E31C18DBE1006D25F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E11C18DBE1006D25F0 /* Reachability.swift */; };
+		FEFF56E61C18DBEA006D25F0 /* BAOSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */; };
+		FEFF56E71C18DBEA006D25F0 /* RoomFunctionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E51C18DBEA006D25F0 /* RoomFunctionValue.swift */; };
+		FEFF56E91C18DBF5006D25F0 /* BAOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E81C18DBF5006D25F0 /* BAOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,11 @@
 		FE20AF461C18D60C0045CBEA /* swiftBAOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftBAOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE20AF4B1C18D60C0045CBEA /* swiftBAOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBAOSTests.swift; sourceTree = "<group>"; };
 		FE20AF4D1C18D60C0045CBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicationController.swift; sourceTree = "<group>"; };
+		FEFF56E11C18DBE1006D25F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAOSAccount.swift; sourceTree = "<group>"; };
+		FEFF56E51C18DBEA006D25F0 /* RoomFunctionValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomFunctionValue.swift; sourceTree = "<group>"; };
+		FEFF56E81C18DBF5006D25F0 /* BAOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,9 @@
 		FE20AF3E1C18D60C0045CBEA /* swiftBAOS */ = {
 			isa = PBXGroup;
 			children = (
+				FEFF56E81C18DBF5006D25F0 /* BAOS.swift */,
+				FEFF56DF1C18DBA1006D25F0 /* Helper */,
+				FEFF56DE1C18DB95006D25F0 /* Models */,
 				FE20AF3F1C18D60C0045CBEA /* swiftBAOS.h */,
 				FE20AF411C18D60C0045CBEA /* Info.plist */,
 			);
@@ -108,6 +121,24 @@
 				FE20AF4D1C18D60C0045CBEA /* Info.plist */,
 			);
 			path = swiftBAOSTests;
+			sourceTree = "<group>";
+		};
+		FEFF56DE1C18DB95006D25F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */,
+				FEFF56E51C18DBEA006D25F0 /* RoomFunctionValue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FEFF56DF1C18DBA1006D25F0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */,
+				FEFF56E11C18DBE1006D25F0 /* Reachability.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFF56E31C18DBE1006D25F0 /* Reachability.swift in Sources */,
+				FEFF56E21C18DBE1006D25F0 /* IndicationController.swift in Sources */,
+				FEFF56E71C18DBEA006D25F0 /* RoomFunctionValue.swift in Sources */,
+				FEFF56E91C18DBF5006D25F0 /* BAOS.swift in Sources */,
+				FEFF56E61C18DBEA006D25F0 /* BAOSAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0E28AF0A9AF65ED7BF59BE2 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hengel.swiftBAOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -385,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83166626FA7B708D58981FB0 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
