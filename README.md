@@ -1,6 +1,9 @@
 # swiftBAOS
 
-Swift Library to communicate with the KNX BAOS 777 from Weinzierl
+Swift Library to communicate with the KNX BAOS 777 from Weinzierl.
+
+This Framework is stil in Beta and not all datapoint & function types are supported.
+
 
 # Special Thanks
 
