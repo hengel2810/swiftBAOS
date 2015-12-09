@@ -11,6 +11,9 @@
 		FE20AF401C18D60C0045CBEA /* swiftBAOS.h in Headers */ = {isa = PBXBuildFile; fileRef = FE20AF3F1C18D60C0045CBEA /* swiftBAOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE20AF471C18D60C0045CBEA /* swiftBAOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE20AF3C1C18D60C0045CBEA /* swiftBAOS.framework */; };
 		FE20AF4C1C18D60C0045CBEA /* swiftBAOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE20AF4B1C18D60C0045CBEA /* swiftBAOSTests.swift */; };
+		FE65BC971C18E2BF008D347C /* Datapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC961C18E2BF008D347C /* Datapoint.swift */; };
+		FE65BC991C18E2CB008D347C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC981C18E2CB008D347C /* Room.swift */; };
+		FE65BC9B1C18E2DD008D347C /* RoomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC9A1C18E2DD008D347C /* RoomFunction.swift */; };
 		FEFF56E21C18DBE1006D25F0 /* IndicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */; };
 		FEFF56E31C18DBE1006D25F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E11C18DBE1006D25F0 /* Reachability.swift */; };
 		FEFF56E61C18DBEA006D25F0 /* BAOSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */; };
@@ -38,6 +41,9 @@
 		FE20AF461C18D60C0045CBEA /* swiftBAOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftBAOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE20AF4B1C18D60C0045CBEA /* swiftBAOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftBAOSTests.swift; sourceTree = "<group>"; };
 		FE20AF4D1C18D60C0045CBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE65BC961C18E2BF008D347C /* Datapoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datapoint.swift; sourceTree = "<group>"; };
+		FE65BC981C18E2CB008D347C /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		FE65BC9A1C18E2DD008D347C /* RoomFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomFunction.swift; sourceTree = "<group>"; };
 		FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicationController.swift; sourceTree = "<group>"; };
 		FEFF56E11C18DBE1006D25F0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAOSAccount.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 			children = (
 				FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */,
 				FEFF56E51C18DBEA006D25F0 /* RoomFunctionValue.swift */,
+				FE65BC961C18E2BF008D347C /* Datapoint.swift */,
+				FE65BC9A1C18E2DD008D347C /* RoomFunction.swift */,
+				FE65BC981C18E2CB008D347C /* Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,10 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE65BC9B1C18E2DD008D347C /* RoomFunction.swift in Sources */,
 				FEFF56E31C18DBE1006D25F0 /* Reachability.swift in Sources */,
 				FEFF56E21C18DBE1006D25F0 /* IndicationController.swift in Sources */,
+				FE65BC991C18E2CB008D347C /* Room.swift in Sources */,
 				FEFF56E71C18DBEA006D25F0 /* RoomFunctionValue.swift in Sources */,
 				FEFF56E91C18DBF5006D25F0 /* BAOS.swift in Sources */,
+				FE65BC971C18E2BF008D347C /* Datapoint.swift in Sources */,
 				FEFF56E61C18DBEA006D25F0 /* BAOSAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
