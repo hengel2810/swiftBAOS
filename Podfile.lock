@@ -1,0 +1,13 @@
+PODS:
+  - Starscream (1.0.2)
+  - SwiftHTTP (1.0.2)
+
+DEPENDENCIES:
+  - Starscream (~> 1.0.0)
+  - SwiftHTTP (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  Starscream: 40e2c4c1c770d811f24116b8b7dbeb4542c56767
+  SwiftHTTP: 6d8ca031a9ce613a01e8f18b497503887b0b50c0
+
+COCOAPODS: 0.39.0
