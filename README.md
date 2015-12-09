@@ -8,6 +8,6 @@ Pleae look in the license file
 
 Special Thanks to Dalton & Austin Cherry who provide the Starscream & swiftHTTP Framework
 
-Dalton Cherry -> https://github.com/daltoniam
+Dalton Cherry -> https://github.com/daltoniam <br>
 Austin Cherry -> https://github.com/acmacalister
 
