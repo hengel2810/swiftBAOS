@@ -8,13 +8,13 @@
 
 import UIKit
 
-class RoomFunctionValue: NSObject {
+public class RoomFunctionValue: NSObject {
 
     var id:String!
     var value:NSNumber!
     var type:NSNumber!
     
-    init(dict:NSDictionary)
+    public init(dict:NSDictionary)
     {
         let numID = dict["id"] as! NSNumber
         self.id = numID.stringValue
@@ -44,7 +44,7 @@ class RoomFunctionValue: NSObject {
         }
     }
     
-    class func typeForArray(array:NSArray) -> Int
+    public class func typeForArray(array:NSArray) -> Int
     {
         var type = 0
         if array.count == 2

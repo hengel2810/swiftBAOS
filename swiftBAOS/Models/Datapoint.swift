@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Datapoint: NSObject {
+public class Datapoint: NSObject {
 
 }

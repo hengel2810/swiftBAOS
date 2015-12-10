@@ -8,25 +8,25 @@
 
 import UIKit
 
-let keyUsername = "keyUsername"
-let keyPassword = "keyPassword"
-let keyHost = "keyHost"
-let keyCurrentAccount = "keyCurrentAccount"
+public let keyUsername = "keyUsername"
+public let keyPassword = "keyPassword"
+public let keyHost = "keyHost"
+public let keyCurrentAccount = "keyCurrentAccount"
 
-class BAOSAccount: NSObject,NSCoding {
+public  class BAOSAccount: NSObject,NSCoding {
 
     var username:String!
     var password:String!
     var host:String!
     
-    override init()
+    public override init()
     {
         self.username = ""
         self.password = ""
         self.host = ""
     }
     
-    init(username:String, password:String, host:String)
+    public init(username:String, password:String, host:String)
     {
         self.username = username
         self.password = password
@@ -34,32 +34,32 @@ class BAOSAccount: NSObject,NSCoding {
     }
     
     //MARK: - NSCoding Methoden
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init()
         self.username = aDecoder.decodeObjectForKey(keyUsername) as! String
         self.password = aDecoder.decodeObjectForKey(keyPassword) as! String
         self.host = aDecoder.decodeObjectForKey(keyHost) as! String
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
+    public func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.username, forKey: keyUsername)
         aCoder.encodeObject(self.password, forKey: keyPassword)
         aCoder.encodeObject(self.host, forKey: keyHost)
     }
     
     //MARK: - Public Methoden
-    func save()
+    public func save()
     {
         let data = NSKeyedArchiver.archivedDataWithRootObject(self)
         NSUserDefaults.standardUserDefaults().setObject(data, forKey: keyCurrentAccount)
     }
     
-    func logout()
+    public func logout()
     {
         NSUserDefaults.standardUserDefaults().removeObjectForKey(keyCurrentAccount)
     }
     
-    static func currentAccount() -> BAOSAccount? {
+    public static func currentAccount() -> BAOSAccount? {
         var account:BAOSAccount? = nil
         let data:NSData? = NSUserDefaults.standardUserDefaults().objectForKey(keyCurrentAccount) as? NSData
         if data != nil {

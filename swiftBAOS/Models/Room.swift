@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Room: NSObject {
+public class Room: NSObject {
 
 }

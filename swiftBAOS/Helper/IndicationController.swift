@@ -15,21 +15,21 @@ let DPT9IndicationNotification = "DPT9IndicationNotification"
 let keyDatapointID = "id"
 let keyValue = "value"
 
-class IndicationController: NSObject
+public class IndicationController: NSObject
 {
-    func dpt1Indication(id:String, value:NSNumber)
+    public func dpt1Indication(id:String, value:NSNumber)
     {
         let dict:[String:AnyObject] = [keyDatapointID:id,keyValue:value]
         NSNotificationCenter.defaultCenter().postNotificationName(DPT1IndicationNotification, object: self, userInfo: dict)
     }
     
-    func dpt5Indication(id:String, value:NSNumber)
+    public func dpt5Indication(id:String, value:NSNumber)
     {
         let dict:[String:AnyObject] = [keyDatapointID:id,keyValue:value]
         NSNotificationCenter.defaultCenter().postNotificationName(DPT5IndicationNotification, object: self, userInfo: dict)
     }
     
-    func dpt9Indication(id:String, value:NSNumber)
+    public func dpt9Indication(id:String, value:NSNumber)
     {
         let dict:[String:AnyObject] = [keyDatapointID:id,keyValue:value]
         NSNotificationCenter.defaultCenter().postNotificationName(DPT9IndicationNotification, object: self, userInfo: dict)

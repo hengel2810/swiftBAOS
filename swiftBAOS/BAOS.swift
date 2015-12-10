@@ -26,7 +26,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     static var shared:BAOS!
     
     //MARK: - Init Methoden
-    init(host:String)
+    public init(host:String)
     {
         super.init()
         self.host = host
@@ -62,7 +62,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         self.shared = BAOS(host: host)
     }
     
-    func createSocket()
+    public func createSocket()
     {
         self.socket = WebSocket(url: NSURL(string: "ws://\(self.host)/websocket")!)
         socket.delegate = self
@@ -71,7 +71,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Private Methoden
-    func connectionChanged(notification:NSNotification)
+    public func connectionChanged(notification:NSNotification)
     {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             NSNotificationCenter.defaultCenter().postNotificationName(BAOSConnectionChangedNotification, object: self)
@@ -83,19 +83,19 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func didEnterBackground()
+    public func didEnterBackground()
     {
         self.applicationInBackground = true
         self.socket.disconnect()
     }
     
-    func willEnterForeground()
+    public func willEnterForeground()
     {
         self.applicationInBackground = false
         self.socket.connect()
     }
     
-    func sendRequest(urlPath:String, method:String, bodyData:NSData?, useAuth:Bool, completionClosure:(NSData -> Void)?, errorClosure:(NSError -> Void)?)
+    public func sendRequest(urlPath:String, method:String, bodyData:NSData?, useAuth:Bool, completionClosure:(NSData -> Void)?, errorClosure:(NSError -> Void)?)
     {
         let request = NSMutableURLRequest(URL: NSURL(string: "\(self.url)\(urlPath)")!,
             cachePolicy: .UseProtocolCachePolicy,
@@ -173,7 +173,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         dataTask.resume()
     }
     
-    func convertStringToDictionary(text: String) -> NSDictionary?
+    public func convertStringToDictionary(text: String) -> NSDictionary?
     {
         let data = text.dataUsingEncoding(NSUTF8StringEncoding)
         do
@@ -188,7 +188,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func sendIndicationPush(datapointType:String, datapointID:String, value:AnyObject)
+    public func sendIndicationPush(datapointType:String, datapointID:String, value:AnyObject)
     {
         switch(datapointType)
         {
@@ -210,7 +210,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Login Methoden
-    func login(username:String, password:String, loginSuccess:(Void -> Void)?, wrongCredentialsError:(Void -> Void)?, loginError:(NSError -> Void)?)
+    public func login(username:String, password:String, loginSuccess:(Void -> Void)?, wrongCredentialsError:(Void -> Void)?, loginError:(NSError -> Void)?)
     {
         let dataString:String!
         if username.characters.count > 0 && password.characters.count > 0
@@ -251,7 +251,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Get Strucuture
-    func getDataPoints(completion:([String:AnyObject] -> Void))
+    public func getDataPoints(completion:([String:AnyObject] -> Void))
     {
         self.sendRequest("/rest/datapoints/descriptions?start=1&end=300", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
             do
@@ -269,7 +269,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func getRooms(completion:([String:AnyObject] -> Void))
+    public func getRooms(completion:([String:AnyObject] -> Void))
     {
         self.sendRequest("/rest/structured/views/rooms", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
                 do
@@ -286,7 +286,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func getFunctionsFromRoom(roomID:String, completion:([String:AnyObject] -> Void))
+    public func getFunctionsFromRoom(roomID:String, completion:([String:AnyObject] -> Void))
     {
         self.sendRequest("/rest/structured/views/rooms/\(roomID)", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
                 do
@@ -304,7 +304,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Get Room Value Methoden
-    func getValuesForRoom(roomID:String, completion:(NSArray -> Void)?)
+    public func getValuesForRoom(roomID:String, completion:(NSArray -> Void)?)
     {
         self.sendRequest("/rest/structured/views/rooms/\(roomID)/values", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
                 do
@@ -329,7 +329,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Get Datapoint Methoden
-    func getDPT1Value(datapointID:String, completion:(NSNumber -> Void))
+    public func getDPT1Value(datapointID:String, completion:(NSNumber -> Void))
     {
         self.sendRequest("/rest/datapoints/values?start=\(datapointID)&count=1", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
             do
@@ -351,7 +351,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func getDPT5Value(datapointID:String, completion:(NSNumber -> Void))
+    public func getDPT5Value(datapointID:String, completion:(NSNumber -> Void))
     {
         self.sendRequest("/rest/datapoints/values?start=\(datapointID)&count=1", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
                 do
@@ -373,7 +373,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func getDPT9Value(datapointID:String, completion:(NSNumber -> Void))
+    public func getDPT9Value(datapointID:String, completion:(NSNumber -> Void))
     {
         self.sendRequest("/rest/datapoints/values?start=\(datapointID)&count=1", method: "GET", bodyData: nil, useAuth: true, completionClosure: { (data:NSData) -> Void in
             do
@@ -396,7 +396,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     }
     
     //MARK: - Set Datapoint Methoden
-    func setDPT1Value(datapointID:String, value:Bool)
+    public func setDPT1Value(datapointID:String, value:Bool)
     {
         let fullURL = "\(self.url)/rest/datapoints/values"
         let headers = [
@@ -419,7 +419,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         }
     }
     
-    func setDPT3Value(datapointID:String, control:Bool, stepcode:Int)
+    public func setDPT3Value(datapointID:String, control:Bool, stepcode:Int)
     {
         let url = "\(self.url)/rest/datapoints/values"
         let headers = [
