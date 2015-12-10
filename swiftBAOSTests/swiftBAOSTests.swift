@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import swiftBAOS
+//@testable import swiftBAOS
 
 class swiftBAOSTests: XCTestCase {
     

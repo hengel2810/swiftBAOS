@@ -14,6 +14,7 @@
 		FE65BC971C18E2BF008D347C /* Datapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC961C18E2BF008D347C /* Datapoint.swift */; };
 		FE65BC991C18E2CB008D347C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC981C18E2CB008D347C /* Room.swift */; };
 		FE65BC9B1C18E2DD008D347C /* RoomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65BC9A1C18E2DD008D347C /* RoomFunction.swift */; };
+		FE65BCDB1C197FBA008D347C /* BAOS.swift in Headers */ = {isa = PBXBuildFile; fileRef = FEFF56E81C18DBF5006D25F0 /* BAOS.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEFF56E21C18DBE1006D25F0 /* IndicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E01C18DBE1006D25F0 /* IndicationController.swift */; };
 		FEFF56E31C18DBE1006D25F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E11C18DBE1006D25F0 /* Reachability.swift */; };
 		FEFF56E61C18DBEA006D25F0 /* BAOSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF56E41C18DBEA006D25F0 /* BAOSAccount.swift */; };
@@ -22,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FE20AF481C18D60C0045CBEA /* PBXContainerItemProxy */ = {
+		FE65BCE21C199081008D347C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE20AF331C18D60C0045CBEA /* Project object */;
 			proxyType = 1;
@@ -158,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE20AF401C18D60C0045CBEA /* swiftBAOS.h in Headers */,
+				FE65BCDB1C197FBA008D347C /* BAOS.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +197,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE20AF491C18D60C0045CBEA /* PBXTargetDependency */,
+				FE65BCE31C199081008D347C /* PBXTargetDependency */,
 			);
 			name = swiftBAOSTests;
 			productName = swiftBAOSTests;
@@ -315,10 +317,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FE20AF491C18D60C0045CBEA /* PBXTargetDependency */ = {
+		FE65BCE31C199081008D347C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FE20AF3B1C18D60C0045CBEA /* swiftBAOS */;
-			targetProxy = FE20AF481C18D60C0045CBEA /* PBXContainerItemProxy */;
+			targetProxy = FE65BCE21C199081008D347C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -360,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -28,9 +28,9 @@ s.dependency 'SwiftHTTP', '~> 1.0.0'
 s.dependency 'Starscream', '~> 1.0.0'
 
 # 8
-# s.source_files = "swiftHTTP/**/*.{swift}"
+s.source_files = "swiftBAOS/**/*.{swift}"
 
 # 9
-# s.resources = "swiftHTTP/**/*.{png,jpeg,jpg,storyboard,xib}"
+# s.resources = "swiftBAOS/**/*.{png,jpeg,jpg,storyboard,xib}"
 
 end

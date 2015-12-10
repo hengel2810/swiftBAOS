@@ -12,7 +12,7 @@ import Starscream
 
 let BAOSConnectionChangedNotification = "BAOSConnectionChangedNotification"
 
-class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate,HTTPSerializeProtocol,WebSocketDelegate {
+public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate,HTTPSerializeProtocol,WebSocketDelegate {
 
     var url:NSURL!
     var host:String!
@@ -57,7 +57,7 @@ class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionT
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "willEnterForeground", name: UIApplicationWillEnterForegroundNotification, object: nil)
     }
     
-    class func createSharedWithHost(host:String)
+    public class func createSharedWithHost(host:String)
     {
         self.shared = BAOS(host: host)
     }
@@ -439,7 +439,7 @@ class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionT
     }
     
     //MARK: - HTTPSerializeProtocol
-    func serialize(request: NSMutableURLRequest, parameters: HTTPParameterProtocol) throws {
+    public func serialize(request: NSMutableURLRequest, parameters: HTTPParameterProtocol) throws {
         if parameters.paramType() == .Dictionary
         {
             let dict = parameters as! NSDictionary
@@ -459,13 +459,13 @@ class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionT
     }
     
     //MARK: - WebSocket-Delegate
-    func websocketDidConnect(socket: WebSocket)
+    public func websocketDidConnect(socket: WebSocket)
     {
         print("websocket is connected")
         self.secondSocketConnect = false
     }
     
-    func websocketDidDisconnect(socket: WebSocket, error: NSError?)
+    public func websocketDidDisconnect(socket: WebSocket, error: NSError?)
     {
         print("websocket is disconnected")
         if !self.applicationInBackground
@@ -485,7 +485,7 @@ class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionT
         }
     }
     
-    func websocketDidReceiveMessage(socket: WebSocket, text: String)
+    public func websocketDidReceiveMessage(socket: WebSocket, text: String)
     {
         print("websocketDidReceiveMessage")
         let dict = self.convertStringToDictionary(text)
@@ -509,7 +509,7 @@ class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionT
 
     }
     
-    func websocketDidReceiveData(socket: WebSocket, data: NSData)
+    public func websocketDidReceiveData(socket: WebSocket, data: NSData)
     {
         print("got some data: \(data.length)")
     }
