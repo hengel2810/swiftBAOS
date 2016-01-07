@@ -8,12 +8,12 @@
 
 import UIKit
 
-let DPT1IndicationNotification = "DPT1IndicationNotification"
-let DPT5IndicationNotification = "DPT5IndicationNotification"
-let DPT9IndicationNotification = "DPT9IndicationNotification"
+public let DPT1IndicationNotification = "DPT1IndicationNotification"
+public let DPT5IndicationNotification = "DPT5IndicationNotification"
+public let DPT9IndicationNotification = "DPT9IndicationNotification"
 
-let keyDatapointID = "id"
-let keyValue = "value"
+public let keyDatapointID = "id"
+public let keyValue = "value"
 
 public class IndicationController: NSObject
 {
