@@ -23,7 +23,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     var reachability:Reachability!
     var applicationInBackground:Bool!
     
-    static var shared:BAOS!
+    public static var shared:BAOS!
     
     //MARK: - Init Methoden
     public init(host:String)
