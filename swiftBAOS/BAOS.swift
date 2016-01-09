@@ -14,14 +14,14 @@ public let BAOSConnectionChangedNotification = "BAOSConnectionChangedNotificatio
 
 public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate,HTTPSerializeProtocol,WebSocketDelegate {
 
-    var url:NSURL!
-    var host:String!
-    var userID:String!
-    var socket:WebSocket!
-    var secondSocketConnect = false
-    var indicationController:IndicationController!
-    var reachability:Reachability!
-    var applicationInBackground:Bool!
+    public var url:NSURL!
+    public var host:String!
+    public var userID:String!
+    public var socket:WebSocket!
+    public var secondSocketConnect = false
+    public var indicationController:IndicationController!
+    public var reachability:Reachability!
+    public var applicationInBackground:Bool!
     
     public static var shared:BAOS!
     
