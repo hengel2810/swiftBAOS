@@ -10,9 +10,9 @@ import UIKit
 
 public class RoomFunctionValue: NSObject {
 
-    var id:String!
-    var value:NSNumber!
-    var type:NSNumber!
+    public var id:String!
+    public var value:NSNumber!
+    public var type:NSNumber!
     
     public init(dict:NSDictionary)
     {

@@ -10,7 +10,7 @@ import UIKit
 import SwiftHTTP
 import Starscream
 
-let BAOSConnectionChangedNotification = "BAOSConnectionChangedNotification"
+public let BAOSConnectionChangedNotification = "BAOSConnectionChangedNotification"
 
 public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionTaskDelegate,HTTPSerializeProtocol,WebSocketDelegate {
 

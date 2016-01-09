@@ -15,9 +15,9 @@ public let keyCurrentAccount = "keyCurrentAccount"
 
 public  class BAOSAccount: NSObject,NSCoding {
 
-    var username:String!
-    var password:String!
-    var host:String!
+    public var username:String!
+    public var password:String!
+    public var host:String!
     
     public override init()
     {
