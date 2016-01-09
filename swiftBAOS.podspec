@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = "9.0"
 s.name = "swiftBAOS"
 s.summary = "Swift library for communication with BAOS 777"
 s.requires_arc = true
