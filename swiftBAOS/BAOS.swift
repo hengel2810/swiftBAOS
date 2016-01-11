@@ -225,7 +225,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         let postData = NSData(data: dataString.dataUsingEncoding(NSUTF8StringEncoding)!)
         self.sendRequest("/rest/login", method: "POST", bodyData: postData, useAuth: false, completionClosure: { (data:NSData) -> Void in
                 self.userID = String(data: data, encoding: NSUTF8StringEncoding)!
-                if self.userID != nil && self.userID.characters.count > 0
+                if self.userID != nil && self.userID.characters.count > 20 && self.userID.characters.count < 35
                 {
                     self.createSocket()
                     if loginSuccess != nil
