@@ -76,7 +76,7 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             NSNotificationCenter.defaultCenter().postNotificationName(BAOSConnectionChangedNotification, object: self)
         }
-        if self.reachability.currentReachabilityStatus == .NotReachable && !self.socket.isConnected
+        if self.reachability.currentReachabilityStatus == .NotReachable && self.socket != nil && !self.socket.isConnected
         {
             self.secondSocketConnect = false
             self.socket.connect()
