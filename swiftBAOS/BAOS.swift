@@ -86,13 +86,19 @@ public class BAOS: NSObject,NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLS
     public func didEnterBackground()
     {
         self.applicationInBackground = true
-        self.socket.disconnect()
+        if self.socket != nil
+        {
+            self.socket.disconnect()
+        }
     }
     
     public func willEnterForeground()
     {
         self.applicationInBackground = false
-        self.socket.connect()
+        if self.socket != nil
+        {
+            self.socket.connect()
+        }
     }
     
     public func sendRequest(urlPath:String, method:String, bodyData:NSData?, useAuth:Bool, completionClosure:(NSData -> Void)?, errorClosure:(NSError -> Void)?)
