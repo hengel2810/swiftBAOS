@@ -2,8 +2,13 @@
 
 Swift Library to communicate with the KNX BAOS 777 from Weinzierl.
 
-This Framework is stil in Beta and not all datapoint & function types are supported.
+This Framework is still in Beta and not all datapoint & function types are supported.
 
+The following function types aresupported:<br>
+Typ 2 - switch controller with status<br>
+Typ 5 - dimmer controller with status<br>
+Typ 7 - jalousie controller with status<br>
+Typ 11 - temperature with setpoint<br>
 
 # Special Thanks
 
